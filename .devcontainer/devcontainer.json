@@ -2,7 +2,8 @@
   "name": "Classroom Python Codespace",
   "image": "mcr.microsoft.com/vscode/devcontainers/python:3.9",
   "settings": {
-    "python.pythonPath": "/usr/local/bin/python"
+    "python.pythonPath": "/usr/local/bin/python",
+    "github.copilot.enable": false
   },
   "extensions": [
     "ms-python.python",
