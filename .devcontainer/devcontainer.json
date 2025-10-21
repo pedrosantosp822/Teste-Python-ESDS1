@@ -9,15 +9,5 @@
     "ms-python.python",
     "ms-python.vscode-pylance"
   ],
-  "postCreateCommand": "pip install -r requirements.txt",
-  "customizations": {
-		"vscode": {
-			"settings": {
-				"github.copilot.enable": false,
-				"github.copilot.chat.enable": false,
-				"github.copilot.completions.enable": false,
-				"github.copilot.inlineSuggest.enable": false
-			}
-		}
-	}
+  "postCreateCommand": "pip install -r requirements.txt"
 }
