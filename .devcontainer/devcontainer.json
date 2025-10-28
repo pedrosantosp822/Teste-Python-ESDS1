@@ -11,7 +11,11 @@
   "settings": {
     "extensions.ignoreRecommendations": true,
     "extensions.autoUpdate": false,
-    "github.copilot.enable": false
+    "github.copilot.enable": false,
+    "github.copilot.editor.enableCodeActions": false,
+    "github.copilot.nextEditSuggestions.enabled": false,
+    "chat.commandCenter.enabled": false,
+    "telemetry.telemetryLevel": "off"
   },
   "remoteUser": "aluno"
 }
