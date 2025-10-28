@@ -1,13 +1,26 @@
 {
-  "name": "Classroom Python Codespace",
-  "image": "mcr.microsoft.com/vscode/devcontainers/python:3.9",
+  "name": "Python Neutral Classroom",
+  "image": "mcr.microsoft.com/devcontainers/python:3.10",
   "settings": {
-    "python.pythonPath": "/usr/local/bin/python",
-    "github.copilot.enable": false
+    "github.copilot.enable": {
+      "*": false
+    },
+    "github.copilot.editor.enableCodeActions": false,
+    "github.copilot.nextEditSuggestions.enabled": false,
+    "chat.commandCenter.enabled": false,
+    "extensions.autoCheckUpdates": false,
+    "extensions.autoUpdate": false,
+    "extensions.showRecommendationsOnlyOnDemand": true,
+    "extensions.supportUntrustedWorkspaces": false
   },
   "extensions": [
     "ms-python.python",
     "ms-python.vscode-pylance"
   ],
-  "postCreateCommand": "pip install -r requirements.txt"
+  "postCreateCommand": "code --uninstall-extension GitHub.copilot || true && pip install -r requirements.txt || true",
+  "overrideCommand": false,
+  "containerEnv": {
+    "DONT_PROMPT_WSL_INSTALL": "true"
+  },
+  "remoteUser": "vscode"
 }
