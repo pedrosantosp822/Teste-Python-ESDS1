@@ -1,11 +1,11 @@
 FROM python:3.10-slim
 
-# Desinstalar ferramentas que permitem acesso à internet
-RUN apt-get update && apt-get remove -y curl wget && \
+# Instalar dependências mínimas para compilar pacotes Python
+RUN apt-get update && apt-get install -y build-essential && \
+    pip install --no-cache-dir numpy pandas matplotlib && \
+    apt-get remove -y curl wget && \
+    apt-get autoremove -y && \
     rm -rf /var/lib/apt/lists/*
-
-# Instalar pacotes Python necessários (pré-definidos)
-RUN pip install numpy pandas matplotlib
 
 # Criar utilizador não privilegiado
 RUN useradd -ms /bin/bash aluno
